@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="clock.js"></script>
+  <link rel="stylesheet" type="text/css" href="clock.css"></link>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    //draw background
+    drawBackground(ctx);
+    //draw clock
+    ctx.translate(650, 280);
+    setInterval(drawClock, 1000);
+  </script>
+</body>
+</html>
